@@ -6,11 +6,23 @@
 
     <groupId>org.example</groupId>
     <artifactId>ads-utils</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>utils</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <archive.repository.snapshot.url>https://nexus-secure-nexus.mycluster-lon02-m-753506-146c6c4a55409bbdb5403b1a18bbffeb-0000.eu-gb.containers.appdomain.cloud/repository/maven-snapshots</archive.repository.snapshot.url>
     </properties>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>${archive.repository.snapshot.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
