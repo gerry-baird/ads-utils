@@ -1,0 +1,15 @@
+
+property loadGetterSetterAsProperties "true"
+package com.gerry.ads.utils;
+
+
+public class Utils
+{
+    public Utils()
+                property groups "BALA"
+                property prototype "true"
+                property pureFunction "true";
+    public static int getAge(java.util.Date arg1, java.util.Date arg2)
+                property pureFunction "true";
+}
+

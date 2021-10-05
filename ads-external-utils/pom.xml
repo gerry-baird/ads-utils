@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ads-utils</artifactId>
+        <groupId>com.gerry.ads</groupId>
+        <version>1.3.2</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ads-external-utils</artifactId>
+    <description>External library providing utility methods</description>
+    <packaging>decision-library</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.gerry.ads</groupId>
+            <artifactId>utils</artifactId>
+            <version>1.3</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.ibm.decision</groupId>
+                    <artifactId>build-maven-plugin</artifactId>
+                    <version>${ads-mojo.version}</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>com.ibm.decision</groupId>
+                <artifactId>build-maven-plugin</artifactId>
+                <version>${ads-mojo.version}</version>
+                <configuration>
+                    <deployments>
+                        <deployment>
+                            <name>${project.artifactId}</name>
+                        </deployment>
+                    </deployments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.ibm.decision</groupId>
+                <artifactId>import-maven-plugin</artifactId>
+                <version>${ads-mojo.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-or-update-BOM-Voc-external-annotations</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <!-- this generation may be skipped -->
+                            <skip>false</skip>
+                            <!-- Optional, by default: en_US -->
+                            <locales>
+                                <locale>en_US</locale>
+
+                            </locales>
+                            <!-- Optional, by default: true -->
+                            <importMethods>true</importMethods>
+                            <!-- Optional, by default: all classes from dependencies -->
+                            <filter>
+                                <includes>
+                                    <include>com.gerry.utils</include>
+                                </includes>
+                            </filter>
+                            <referenceFolder>reference</referenceFolder>
+                        </configuration>
+                        <goals>
+                            <goal>import</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

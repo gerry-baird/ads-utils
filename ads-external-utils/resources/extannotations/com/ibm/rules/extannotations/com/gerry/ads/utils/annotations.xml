@@ -1,0 +1,5 @@
+<root>
+  <item name="com.gerry.ads.utils.Utils Utils()">
+    <annotation name="com.ibm.rules.engine.annotations.PureFunction"/>
+  </item>
+</root>

@@ -1,0 +1,3 @@
+
+# com.gerry.ads.utils.Utils
+com.gerry.ads.utils.Utils.getAge(java.util.Date,java.util.Date)#phrase.navigation = the age of someone on {0} who was born on {1}

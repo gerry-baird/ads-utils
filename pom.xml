@@ -4,18 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>com.gerry.ads</groupId>
     <artifactId>ads-utils</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.3.2</version>
     <modules>
         <module>utils</module>
+        <module>ads-external-utils</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <archive.repository.snapshot.url>https://nexus-secure-nexus.mycluster-lon02-m-753506-146c6c4a55409bbdb5403b1a18bbffeb-0000.eu-gb.containers.appdomain.cloud/repository/maven-snapshots</archive.repository.snapshot.url>
+        <archive.repository.release.url>https://nexus-secure-nexus.mycluster-lon02-m-753506-146c6c4a55409bbdb5403b1a18bbffeb-0000.eu-gb.containers.appdomain.cloud/repository/ads</archive.repository.release.url>
+        <ads-mojo.version>4.6.2</ads-mojo.version>
+        <ads-annotations.version>1.0.10</ads-annotations.version>
     </properties>
 
     <distributionManagement>
@@ -23,6 +27,10 @@
             <id>maven-snapshots</id>
             <url>${archive.repository.snapshot.url}</url>
         </snapshotRepository>
+        <repository>
+            <id>ads</id>
+            <url>${archive.repository.release.url}</url>
+        </repository>
     </distributionManagement>
 
 </project>
