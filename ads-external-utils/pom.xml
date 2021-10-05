@@ -43,13 +43,6 @@
                 <groupId>com.ibm.decision</groupId>
                 <artifactId>build-maven-plugin</artifactId>
                 <version>${ads-mojo.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.ibm.decision</groupId>
-                        <artifactId>foundation</artifactId>
-                        <version>4.6.2</version>
-                    </dependency>
-                </dependencies>
                 <configuration>
                     <deployments>
                         <deployment>
@@ -62,13 +55,6 @@
                 <groupId>com.ibm.decision</groupId>
                 <artifactId>import-maven-plugin</artifactId>
                 <version>${ads-mojo.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.ibm.decision</groupId>
-                        <artifactId>foundation</artifactId>
-                        <version>4.6.2</version>
-                    </dependency>
-                </dependencies>
                 <executions>
                     <execution>
                         <id>generate-or-update-BOM-Voc-external-annotations</id>
