@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <!-- use our own local repository allows checks if needed  -->
+    <localRepository>/Users/gerry/.m2/ads-repository</localRepository>
+
+    <profiles>
+        <profile>
+            <id>mavenRepos</id>
+            <repositories>
+                <repository>
+                    <id>maven-snapshots</id>
+                    <name>Maven snapshot repo</name>
+                    <url>https://nexus-secure-nexus.mycluster-lon02-m-753506-146c6c4a55409bbdb5403b1a18bbffeb-0000.eu-gb.containers.appdomain.cloud/repository/ads/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>ads</id>
+                    <name>Maven repo for ads external libraries</name>
+                    <url>https://nexus-secure-nexus.mycluster-lon02-m-753506-146c6c4a55409bbdb5403b1a18bbffeb-0000.eu-gb.containers.appdomain.cloud/repository/ads/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>ads-plugins</id>
+                    <name>Maven repo for ads plugins and the foundation jar</name>
+                    <url>https://nexus-secure-nexus.mycluster-lon02-m-753506-146c6c4a55409bbdb5403b1a18bbffeb-0000.eu-gb.containers.appdomain.cloud/repository/ads-plugins/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>ads-plugins</id>
+                    <name>Maven plugins</name>
+                    <url>https://nexus-secure-nexus.mycluster-lon02-m-753506-146c6c4a55409bbdb5403b1a18bbffeb-0000.eu-gb.containers.appdomain.cloud/repository/ads-plugins/</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>mavenRepos</activeProfile>
+    </activeProfiles>
+    <servers>
+        <server>
+            <id>maven-snapshots</id>
+            <username>admin</username>
+            <password>password goes here</password>
+        </server>
+        <server>
+            <id>ads</id>
+            <username>admin</username>
+            <password>password goes here</password>
+        </server>
+        <server>
+            <id>ads-plugins</id>
+            <username>admin</username>
+            <password>password goes here</password>
+        </server>
+    </servers>
+</settings>
