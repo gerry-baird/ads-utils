@@ -7,7 +7,7 @@
     <groupId>com.gerry.ads</groupId>
     <artifactId>ads-utils</artifactId>
     <packaging>pom</packaging>
-    <version>1.3.2</version>
+    <version>1.3.5</version>
     <modules>
         <module>utils</module>
         <module>ads-external-utils</module>
