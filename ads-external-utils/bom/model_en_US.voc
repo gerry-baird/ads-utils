@@ -1,5 +1,5 @@
-
 # com.gerry.ads.utils.Utils
 com.gerry.ads.utils.Utils#concept.label = utils
 com.gerry.ads.utils.Utils.Utils()#phrase.navigation = a new {utils}
 com.gerry.ads.utils.Utils.getAge(java.util.Date,java.util.Date)#phrase.navigation = the age of someone on {0} who was born on {1}
+com.gerry.ads.utils.Utils.stringDoesNotMatchPattern(java.lang.String,java.lang.String)#phrase.navigation = {0} does not match regex {1}

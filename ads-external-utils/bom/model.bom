@@ -3,6 +3,17 @@ property loadGetterSetterAsProperties "true"
 package com.gerry.ads.utils;
 
 
+public class Messages
+{
+    public readonly java.lang.String[] messages;
+    public Messages()
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public void addMessage(string arg)
+                property collectionAttribute "addresses";
+}
+
 public class Utils
 {
     public Utils()
@@ -10,6 +21,8 @@ public class Utils
                 property prototype "true"
                 property pureFunction "true";
     public static int getAge(java.util.Date arg1, java.util.Date arg2)
+                property pureFunction "true";
+    public static boolean stringDoesNotMatchPattern(string arg1, string arg2)
                 property pureFunction "true";
 }
 
